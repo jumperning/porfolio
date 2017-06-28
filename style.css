@@ -3,6 +3,7 @@
 #puto-el-que-lee h1:after {content: ""; width: 400px; height: 4px; background-color: black; display: block;}
 
 .glitch {
+	z-index:999;
   color: white;
   font-size: 100px;
   position: relative;
