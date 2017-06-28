@@ -1,172 +1,74 @@
-<html>
-<head>
-  <title>Momento Libre</title>
-    <meta charset="UTF-8">
+<html><head>
+	<title>Firma Otp</title>
 </head>
-  <link href='https://fonts.googleapis.com/css?family=Varela' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.6/superhero/bootstrap.css">
-  <link rel="stylesheet" href="style.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <body>
-  <div class="container-fluid">
-    <header id="header" class="col-md-12">
-       <div class="container-header">
-          <div class="glitch" data-text="Momento Libre">Momento Libre</div> 
-              <div class="glitch-img" style="background-image: url('bg2.png')"></div>
-
-        </div><canvas id="tv"> </canvas>
-        <video poster="mob-header.jpg" id="bgvid" playsinline autoplay muted loop>
-          <source src="https://newsletter.dafiti.com.ar/header-bg-final.mp4" type="video/mp4">
-        </video>
-    </header><!-- /header -->
-  </div>
-<div class="container-fluid" id="puto-el-que-lee">
-  <div class="container">
-    <section class="row">
-      <h1>Fabio zerpa tiene razón.</h1>
-    </section>
-  </div>
-</div>
-<script src="mgGlitch.min.js"></script>
-    <!-- active plugin -->
-    <script>
-  $( function() {
-    $( ".glitch-img" ).mgGlitch({
-      destroy : false, // set 'true' to stop the plugin
-                        glitch: true, // set 'false' to stop glitching
-                        scale: true, // set 'false' to stop scaling
-                        blend : true, // set 'false' to stop glitch blending
-                        blendModeType : 'hue', // select blend mode type
-                        glitch1TimeMin : 600, // set min time for glitch 1 elem
-                        glitch1TimeMax : 900, // set max time for glitch 1 elem
-                        glitch2TimeMin : 10, // set min time for glitch 2 elem
-                        glitch2TimeMax : 115, // set max time for glitch 2 elem
-    });
-  });
-</script>
-<script>
-var vid = document.getElementById("bgvid");
-var pauseButton = document.querySelector("#polina button");
-
-if (window.matchMedia('(prefers-reduced-motion)').matches) {
-    vid.removeAttribute("autoplay");
-    vid.pause();
-    pauseButton.innerHTML = "Paused";
+	<style type="text/css" media="screen">
+		.firma img {width: 100%;}
+		.firma img.mid {width: 50%; float: left;}
+		p {
+    margin: 0px;
+    padding-top: 4px;
+    color: #000;
+    text-decoration: blink;
 }
-
-function vidFade() {
-  vid.classList.add("stopfade");
+a {
+    color: #000;
+    text-decoration: blink;
 }
-
-vid.addEventListener('ended', function()
-{
-// only functional if "loop" is removed 
-vid.pause();
-// to capture IE10
-vidFade();
-}); 
-
-
-pauseButton.addEventListener("click", function() {
-  vid.classList.toggle("stopfade");
-  if (vid.paused) {
-    vid.play();
-    pauseButton.innerHTML = "Pause";
-  } else {
-    vid.pause();
-    pauseButton.innerHTML = "Paused";
+@media (max-width: 600px) {
+  .firma {
+    width: 100% !important;
   }
-})
-</script>
-<script> 
-(function() {
-  "use strict";
+  .firma img {    width: 100% !important;}
+  .firma td {width: 100% !important;}
+  .firma .mid {width: 50% !important;}
+}	
 
-  var canvas = document.querySelector("#tv"),
-    context = canvas.getContext("2d"),
-    scaleFactor = 2.5, // Noise size
-    samples = [],
-    sampleIndex = 0,
-    scanOffsetY = 0,
-    scanSize = 0,
-    FPS = 50,
-    scanSpeed = FPS * 15, // 15 seconds from top to bottom
-    SAMPLE_COUNT = 10;
+	</style>
+<table style="width: 700px;" class="firma">
+	<tbody>
+			<tr style="width: 1070px;">
+				<td width="130" style="float: left;"> 
+				<a href="http://otphotel.com/" title="">	<img src="http://otphotel.com/mail_img/IMG/01.png" alt="" style="
+    width: 140px;
+"></a>
+				</td>
+				<td width="280" style="float: left;"> 
+					<p>REITA GADKARI <br> Director</p>
+				<a href=" https://www.google.co.uk/maps/place/Owl+and+the+Pussycat+Hotel+%26+Restaurant/@5.998626,80.2694573,17z/data=!3m1!4b1!4m5!3m4!1s0x3ae172a1642fa7e3:0x51f8b2cca89a1bc1!8m2!3d5.998626!4d80.271646?hl=es" title=""><p>N° 788, Matara Road, Thalpe, Sri Lanka</p></a>
+				<p> <a href="tel:+94777240077" title="">T: +94777240077</a></p>
+				<p> <a href="http://otphotel.com/" title="">www.otphotel.com</a></p>
+				<p> <a href="https://www.instagram.com/otphotel/" title=""><img src="http://otphotel.com/mail_img/IMG/inst.png" class="mid" alt="" style="
+    width: 40px;
+"></a> <a href="https://www.facebook.com/otphotel/" title=""> <img src="http://otphotel.com/mail_img/IMG/fb.png" class="mid" alt="" style="
+    width: 40px;
+"></a> </p>
+				</td>
+				<td width="250" style="float: left;"> 
+				<a href="http://www.slh.com/hotels/owl-and-pussycat-hotel/" title="">
+					<img src="http://otphotel.com/mail_img/IMG/small.png" class="mid" alt="" style="
+    width: 111px;
+    ">
+					</a>
+				<a href="http://www.purelifeexperiences.com/" title="">
+					<img src="http://otphotel.com/mail_img/IMG/pure.png" class="mid" alt="" style="width: 91px;">
+						
+				</a>
+				</td>
+			</tr>
+			<tr>
+				<td width="640px"> 
+					<img src="05.png" alt="">
+				</td>				
+			</tr>
+				<tr>
+				<td width="370"> 
+					<img src="http://otphotel.com/mail_img/IMG/04.png" alt="" style="
+    width: 660px;
+">
+				</td>				
+			</tr>
+		</tbody>
+	</table>	
 
-  window.onresize = function() {
-    canvas.width = canvas.offsetWidth / scaleFactor;
-    canvas.height = canvas.width / (canvas.offsetWidth / canvas.offsetHeight);
-    scanSize = (canvas.offsetHeight / scaleFactor) / 3;
-
-    samples = []
-    for(var i = 0; i < SAMPLE_COUNT; i++)
-      samples.push(generateRandomSample(context, canvas.width, canvas.height));
-  };
-
-  function interpolate(x, x0, y0, x1, y1) {
-    return y0 + (y1 - y0)*((x - x0)/(x1 - x0));
-  }
-
-
-  function generateRandomSample(context, w, h) {  
-    var intensity = [];
-    var random = 0;
-    var factor = h / 50;
-
-    var intensityCurve = [];
-    for(var i = 0; i < Math.floor(h / factor) + factor; i++)
-      intensityCurve.push(Math.floor(Math.random() * 15));
-
-    for(var i = 0; i < h; i++) {
-      var value = interpolate((i/factor), Math.floor(i / factor), intensityCurve[Math.floor(i / factor)], Math.floor(i / factor) + 1, intensityCurve[Math.floor(i / factor) + 1]);
-      intensity.push(value);
-    }
-
-    var imageData = context.createImageData(w, h);
-    for(var i = 0; i < (w * h); i++) {
-      var k = i * 4;
-      var color = Math.floor(36 * Math.random());
-      // Optional: add an intensity curve to try to simulate scan lines
-      color += intensity[Math.floor(i / w)];
-      imageData.data[k] = imageData.data[k + 1] = imageData.data[k + 2] = color;
-      imageData.data[k + 3] = 255;
-    }
-    return imageData;
-  } 
-
-  function render() {
-    context.putImageData(samples[Math.floor(sampleIndex)], 0, 0);
-
-    sampleIndex += 30 / FPS; // 1/FPS == 1 second
-    if(sampleIndex >= samples.length) sampleIndex = 0;
-
-    var grd = context.createLinearGradient(0, scanOffsetY, 0, scanSize + scanOffsetY);
-
-    grd.addColorStop(0, 'rgba(255,255,255,0)');
-    grd.addColorStop(0.1, 'rgba(255,255,255,0)');
-    grd.addColorStop(0.2, 'rgba(255,255,255,0.2)');
-    grd.addColorStop(0.3, 'rgba(255,255,255,0.0)');
-    grd.addColorStop(0.45, 'rgba(255,255,255,0.1)');
-    grd.addColorStop(0.5, 'rgba(255,255,255,1.0)');
-    grd.addColorStop(0.55, 'rgba(255,255,255,0.55)');
-    grd.addColorStop(0.6, 'rgba(255,255,255,0.25)');
-    //grd.addColorStop(0.8, 'rgba(255,255,255,0.15)');
-    grd.addColorStop(1, 'rgba(255,255,255,0)');
-
-    context.fillStyle = grd;
-    context.fillRect(0, scanOffsetY, canvas.width, scanSize + scanOffsetY);
-    context.globalCompositeOperation = "lighter";
-
-    scanOffsetY += (canvas.height / scanSpeed);
-    if(scanOffsetY > canvas.height) scanOffsetY = -(scanSize / 2);
-
-    window.setTimeout(function() {
-      window.requestAnimationFrame(render);
-    }, 1000 / FPS);
-  }
-  window.onresize();
-  window.requestAnimationFrame(render);
-})();
-</script>
-</body>
-</html>
+</body></html>
