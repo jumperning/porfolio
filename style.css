@@ -1,7 +1,16 @@
 #puto-el-que-lee{height: 100vh; color: #000; background-color: #fff;}
 #puto-el-que-lee h1 {font-size: 90px; width: 400px; margin-top: 90px;}
 #puto-el-que-lee h1:after {content: ""; width: 400px; height: 4px; background-color: black; display: block;}
-
+#tv {
+	position: absolute;
+	top: 0;
+	left: 0;
+	-webkit-transform: translate3d(0, 0, 0);
+	-moz-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+	-webkit-backface-visibility: hidden;
+	-webkit-perspective: 1000;
+}
 .glitch {
 	z-index:999;
   color: white;
