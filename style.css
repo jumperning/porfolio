@@ -1,21 +1,51 @@
-#puto-el-que-lee{height: 100vh; color: #000; background-color: #fff;}
-#puto-el-que-lee h1 {font-size: 90px; width: 400px; margin-top: 90px;}
-#puto-el-que-lee h1:after {content: ""; width: 400px; height: 4px; background-color: black; display: block;}
+.fleft{float: left;}
+#ovni{
+ -webkit-animation: girar 2s infinite linear;
+    animation: girar 2s infinite linear;
+}
+@-webkit-keyframes girar {
+    from { transform: rotate(0deg)  translate(-10px) rotate(0deg); }
+    to { transform: rotate(360deg) translate(-10px) rotate(-360deg); }
+}
+@keyframes girar {
+    from { transform: rotate(0deg)  translate(-10px) rotate(0deg); }
+    to { transform: rotate(360deg) translate(-10px) rotate(-360deg); }
+}
+#move{
+ -webkit-animation: girara 3s infinite linear;
+    animation: girara 3s infinite linear;
+}
+@-webkit-keyframes girara {
+    from { transform: rotate(0deg)  translate(-3px) rotate(0deg); }
+    to { transform: rotate(360deg) translate(-3px) rotate(-360deg); }
+}
+@keyframes girara {
+    from { transform: rotate(0deg)  translate(-3px) rotate(0deg); }
+    to { transform: rotate(360deg) translate(-3px) rotate(-360deg); }
+}
+.marcas {
+    margin-top: 90px;
+    text-align: center;
+}
+.marcas img {
+    width: 150px;
+    margin-left: 70px;
+}
 #tv {
     position: absolute;
     width: 100%;
     height: 100vh;
     top: 0;
     opacity: 0.3;
-	left: 0;
-	-webkit-transform: translate3d(0, 0, 0);
-	-moz-transform: translate3d(0, 0, 0);
-	transform: translate3d(0, 0, 0);
-	-webkit-backface-visibility: hidden;
-	-webkit-perspective: 1000;
+  left: 0;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000;
 }
 .glitch {
-	z-index:999;
+  z-index:999;
   color: white;
   font-size: 100px;
   position: relative;
@@ -188,11 +218,11 @@
     width: 100%;
 }
         /* glitch elem must have absolute position */
-        .glitch-img {position: absolute; width : 100%; height : 100%; top: 0 ; left : 0; background-position:center;  -moz-background-size:cover;-o-background-size:cover;-webkit-background-size:cover;background-size:cover;
+        .glitch-img {position: absolute; width : 100%; height : 100vh; top: 0 ; left : 0; background-position:center;  -moz-background-size:cover;-o-background-size:cover;-webkit-background-size:cover;background-size:cover;
         } 
         
 .logo{
-	content: "";
+  content: "";
     display: block;
     background-color: white;
     text-align: left;
@@ -213,15 +243,14 @@ body{
 
         video { 
     position: fixed;
-    top: 50%;
+    top: 0%;
     left: 50%;
     min-width: 100%;
-    min-height: 100%;
+    height: 100vh;
     width: auto;
     height: auto;
     z-index: -100;
-    transform: translateX(-50%) translateY(-50%);
- background: url('//demosthenes.info/assets/images/polina.jpg') no-repeat;
+    transform: translateX(-50%) translateY(0%);
   background-size: cover;
   transition: 1s opacity;
 }
@@ -244,22 +273,6 @@ h1 {
   margin-top: 0;
   letter-spacing: .3rem;
 }
-#polina button { 
-  display: block;
-  width: 80%;
-  padding: .4rem;
-  border: none; 
-  margin: 1rem auto; 
-  font-size: 1.3rem;
-  background: rgba(255,255,255,0.23);
-  color: #fff;
-  border-radius: 3px; 
-  cursor: pointer;
-  transition: .3s background;
-}
-#polina button:hover { 
-   background: rgba(0,0,0,0.5);
-}
 
 a {
   display: inline-block;
@@ -269,7 +282,27 @@ a {
   padding: .5rem;
   transition: .6s background; 
 }
-header#header {
+
+#frace{height: 100vh; color: #000; background-color: #fff;    padding-top: 110px;}
+::-moz-selection { color: green;background-color: #ccc;}
+::selection { color: green; background-color: #ccc;}
+#frace h1 {font-size: 82px; width: 50%; margin-top: 90px; float: left;}
+#frace h1:after {content: ""; width: 400px; height: 4px; background-color: black; display: block;}
+#laburos {height: 100vh;  color: #00a7ff; background-image: url("bg-site.png"); background-color: #a01142;}
+#laburos h1 {
+    font-size: 90px;
+    margin-top: 90px;
+    float: right;
+    text-shadow: 2px 2px 0px #fff;
+}
+#laburos h1:after {content: ""; width: 400px; height: 4px; background-color: #00a7ff; display: block;}
+#laburos .glitch {
+    font-size: 40px;
+    width: 41px;
+    line-height: 40px;
+    margin-top: 50px;
+}
+header {
     height: 100vh;
 }
 a:hover{
@@ -277,56 +310,12 @@ a:hover{
 }
 @media screen and (max-width: 500px) { 
   div{width:70%;} 
+  #ovni{display: none;}
+#frace {padding-top:0px; }
+.glitch {width: 100% !important;}
 }
 @media screen and (max-device-width: 800px) {
-
-}
-
-nav.menu {
-    float: right;
-    margin: 35px;
-}
-.loguito {
-    color: #000;
-    font-size: 40px;
-    text-transform: uppercase;
-    margin: 20px;
-}
-nav.menu ul li {
-    display: inline-block;
-    margin-left: 10px;
-}
-nav.menu ul li a {
-    color: #000;
-}
-#Mis-Laburos {background-color: pink;}
-#demo {
-position: relative;
-max-width: 100%;
-width: 100%;
-}
-img 
-{width: 100%;
-max-width: 100%;
-height: auto;
-}
-.white-panel {
-position: absolute;
-background: white;
-box-shadow: 0px 1px 2px rgba(0,0,0,0.3);
-padding: 10px;
-}
-.white-panel h1 {
-font-size: 1em;
-}
-.white-panel h1 a {
-color: #A92733;
-}
-.white-panel:hover {
-box-shadow: 1px 1px 10px rgba(0,0,0,0.5);
-margin-top: -5px;
--webkit-transition: all 0.3s ease-in-out;
--moz-transition: all 0.3s ease-in-out;
--o-transition: all 0.3s ease-in-out;
-transition: all 0.3s ease-in-out;
+#ovni{display: none;}
+#frace {padding-top:0px; }
+.glitch {width: 100% ;}
 }
