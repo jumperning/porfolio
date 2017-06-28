@@ -1,0 +1,82 @@
+<html>
+<head>
+	<title>Momento Libre</title>
+	  <meta charset="UTF-8">
+</head>
+  <link href='https://fonts.googleapis.com/css?family=Varela' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.6/superhero/bootstrap.css">
+  <link rel="stylesheet" href="rsc/css/style.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<body>
+	<div class="row">
+    <header id="header" class="col-md-12">
+        <div class="container-header">
+          <div class="glitch" data-text="Momento Libre">Momento Libre</div> 
+          <div class="glitch-img" style="background-image: url('rsc/img/bg2.png')"></div>
+        </div>
+        <video poster="rsc/img/black.png" id="bgvid" playsinline autoplay muted loop>
+      		<source src="http://jrepossi.com/video/header-bg-final.mp4" type="video/mp4">
+    		</video>
+    </header><!-- /header -->
+  </div>
+<div class="row" id="puto-el-que-lee">
+  <div class="container">
+  	<section class="row">
+  		<h1>Fabio zerpa tiene razón.</h1>
+  	</section>
+  </div>
+</div>
+<script src="rsc/js/mgGlitch.min.js"></script>
+    <!-- active plugin -->
+    <script>
+	$( function() {
+		$( ".glitch-img" ).mgGlitch({
+			destroy : false, // set 'true' to stop the plugin
+                        glitch: true, // set 'false' to stop glitching
+                        scale: true, // set 'false' to stop scaling
+                        blend : true, // set 'false' to stop glitch blending
+                        blendModeType : 'hue', // select blend mode type
+                        glitch1TimeMin : 600, // set min time for glitch 1 elem
+                        glitch1TimeMax : 900, // set max time for glitch 1 elem
+                        glitch2TimeMin : 10, // set min time for glitch 2 elem
+                        glitch2TimeMax : 115, // set max time for glitch 2 elem
+		});
+	});
+</script>
+<script>
+var vid = document.getElementById("bgvid");
+var pauseButton = document.querySelector("#polina button");
+
+if (window.matchMedia('(prefers-reduced-motion)').matches) {
+    vid.removeAttribute("autoplay");
+    vid.pause();
+    pauseButton.innerHTML = "Paused";
+}
+
+function vidFade() {
+  vid.classList.add("stopfade");
+}
+
+vid.addEventListener('ended', function()
+{
+// only functional if "loop" is removed 
+vid.pause();
+// to capture IE10
+vidFade();
+}); 
+
+
+pauseButton.addEventListener("click", function() {
+  vid.classList.toggle("stopfade");
+  if (vid.paused) {
+    vid.play();
+    pauseButton.innerHTML = "Pause";
+  } else {
+    vid.pause();
+    pauseButton.innerHTML = "Paused";
+  }
+})
+</script>
+
+</body>
+</html>
